@@ -1,0 +1,45 @@
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    background-color: #f9f4f5;
+    color: #000000;
+}
+
+.content h1,
+.content h2 {
+    color: #333;
+}
+
+.content p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content ul li {
+    background: #f0f0f0;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.content .hours,
+.content .contact {
+    margin-top: 20px;
+}
+
+.services a {
+    color: #70587c;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.intro {
+    color: #502f4c;
+}

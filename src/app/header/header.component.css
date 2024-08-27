@@ -1,0 +1,34 @@
+header {
+    background-color: #502f4c;
+    color: #c8b8db;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo a {
+    color: #c8b8db;
+    font-size: 35px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #c8b8db;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+}
