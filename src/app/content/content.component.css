@@ -5,6 +5,7 @@
     font-family: Arial, sans-serif;
     background-color: #f9f4f5;
     color: #000000;
+    border-radius: 5px;
 }
 
 .content h1,
@@ -18,14 +19,15 @@
 }
 
 .content ul {
+    display: inline-flex;
     list-style-type: none;
     padding: 0;
 }
 
 .content ul li {
     background: #f0f0f0;
-    margin: 5px 0;
-    padding: 10px;
+    margin: 5px 19px;
+    padding: 10px 10px 0px 10px;
     border-radius: 5px;
 }
 
