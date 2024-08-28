@@ -10,7 +10,7 @@ import { BookService } from '../book.service';
   styleUrl: './view-all-books.component.css',
 })
 export class ViewAllBooksComponent {
-  books: Book[] | undefined;
+  books: Book[] = [];
   constructor(private bookService: BookService){ }
   ngOnInit(): void{
     this.getBooks();
