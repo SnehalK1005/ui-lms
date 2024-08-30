@@ -7,13 +7,16 @@ import { Book } from './book';
   providedIn: 'root'
 })
 export class BookService {
-  private baseUrl = "http://localhost:8080/api/v1/books"
+  private baseUrl = "http://localhost:8080/api/v1"
   constructor(private httpClient: HttpClient) { }
 
   getBooksList(): Observable<Book[]>{
-    return this.httpClient.get<Book[]>(`${this.baseUrl}`);
+    return this.httpClient.get<Book[]>(`${this.baseUrl}/books`);
   }
   addBook(book: Book): Observable<Book> {
-    return this.httpClient.post<Book>(this.baseUrl, book);
+    return this.httpClient.post<Book>(`${this.baseUrl}/books`, book);
+  }
+  getBookById(id: number): Observable<Book> {
+    return this.httpClient.get<Book>(`${this.baseUrl}/book/${id}`);
   }
 }
