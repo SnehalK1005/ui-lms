@@ -3,7 +3,9 @@ export class Book {
     title: string = '';
     author: string = '';
     publisher: string = '';
-    price: string = '';
-    quantity: string = '';
+    price: number | undefined;
+    quantity: number | undefined;
     isbn: string = '';
+    description: string = '';
+    cover: string = '';
 }

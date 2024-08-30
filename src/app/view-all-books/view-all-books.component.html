@@ -8,13 +8,13 @@
             <th>Author</th>
             <th>Publisher</th>
             <th>Price</th>
-            <th>ISBN</th> 
+            <th>ISBN</th>
             <th>Quantity</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor = "let book of books">
-            <td>{{book.title}}</td>
+        <tr *ngFor="let book of books">
+            <td><a class= "bookTitle" [href]="'/book/' + book.id">{{book.title}}</a></td>
             <td>{{book.author}}</td>
             <td>{{book.publisher}}</td>
             <td>{{book.price}}</td>
