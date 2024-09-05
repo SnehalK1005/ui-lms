@@ -71,4 +71,77 @@
       font-size: 14px;
     }
   }
+  /* Container styling */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header styling */
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #502f4c;
+    background-color: #c8b8db;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Label styling */
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #502f4c;
+  }
+  
+  /* Input styling */
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding does not affect width */
+  }
+  
+  /* Button styling */
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #502f4c;
+    color: #c8b8db;
+    font-size: 18px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #502f4c;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .container {
+      padding: 15px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  }
   

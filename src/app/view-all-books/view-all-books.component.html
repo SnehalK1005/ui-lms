@@ -10,6 +10,7 @@
             <th>Price</th>
             <th>ISBN</th>
             <th>Quantity</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -20,6 +21,9 @@
             <td>{{book.price}}</td>
             <td>{{book.isbn}}</td>
             <td>{{book.quantity}}</td>
+            <td>
+                <button (click)="updateBook(book.id)" class="btn btn-info">Update</button>
+            </td>
         </tr>
     </tbody>
 </table>

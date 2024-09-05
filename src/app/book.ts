@@ -7,5 +7,4 @@ export class Book {
     quantity: number | undefined;
     isbn: string = '';
     description: string = '';
-    cover: string = '';
 }
