@@ -16,7 +16,7 @@ export class BookService {
   addBook(book: Book): Observable<Book> {
     return this.httpClient.post<Book>(`${this.baseUrl}/books`, book);
   }
-  getBookById(id: number): Observable<Book> {
+  getBookById(id: number|undefined): Observable<Book> {
     return this.httpClient.get<Book>(`${this.baseUrl}/book/${id}`);
   }
 }

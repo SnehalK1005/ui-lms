@@ -1,13 +1,9 @@
 <div class="container" *ngIf="book">
     <h2>{{ book.title }}</h2>
-    <div class="imageDiv">
-        <img src="{{ book.cover }}" alt="{{ book.title }}">
-    </div>
     <p><strong>Author :</strong> {{ book.author }}</p>
     <p><strong>Publisher :</strong> {{ book.publisher }}</p>
     <p><strong>ISBN Number :</strong> {{ book.isbn }}</p>
     <p><strong>Short Description :</strong> {{ book.description }}</p>
-    <!-- Add more fields as necessary -->
 </div>
 
 <div *ngIf="!book">

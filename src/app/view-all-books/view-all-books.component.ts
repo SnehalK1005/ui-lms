@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Book } from '../book';
 import { CommonModule } from '@angular/common';
 import { BookService } from '../book.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-view-all-books',
   standalone: true,
@@ -11,7 +12,7 @@ import { BookService } from '../book.service';
 })
 export class ViewAllBooksComponent {
   books: Book[] = [];
-  constructor(private bookService: BookService){ }
+  constructor(private bookService: BookService, private router: Router){ }
   ngOnInit(): void{
     this.getBooks();
   }
@@ -19,5 +20,8 @@ export class ViewAllBooksComponent {
     this.bookService.getBooksList().subscribe(data => {
       this.books = data;
     })
+  }
+  updateBook(id: number|undefined){
+    this.router.navigate(['updateBook', id])
   }
 }
