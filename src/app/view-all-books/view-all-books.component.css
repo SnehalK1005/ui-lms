@@ -22,7 +22,21 @@
 }
 
 #updateBtn {
-    background-color: #c8b8db;
+    background-color: #ffe188;
     color: #502f4c;
     border: none;
+}
+#deleteBtn{
+    background-color: #eb727e;
+    margin-left: 5px;
+    border: none;
+}
+#viewBtn{
+    background-color: #c8b8db;
+    color: #502f4c;
+    margin-right: 5px;
+    border: none;
+}
+th.center , td.center{
+    text-align: center;
 }

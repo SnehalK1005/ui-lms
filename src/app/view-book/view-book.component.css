@@ -27,3 +27,9 @@ h2 {
   height: 200px;
   border: 5px solid #502f4c;
 }
+
+#backBtn {
+  background-color: #c8b8db;
+  color: #502f4c;
+  border: none;
+}

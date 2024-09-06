@@ -1,4 +1,5 @@
 <div class="container" *ngIf="book">
+    <button id="backBtn" (click)="backToViewBook()" class="btn btn-info">Back</button>
     <h2>{{ book.title }}</h2>
     <p><strong>Author :</strong> {{ book.author }}</p>
     <p><strong>Publisher :</strong> {{ book.publisher }}</p>

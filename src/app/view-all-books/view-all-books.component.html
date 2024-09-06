@@ -7,10 +7,10 @@
             <th>Title</th>
             <th>Author</th>
             <th>Publisher</th>
-            <th>Price</th>
-            <th>ISBN</th>
-            <th>Quantity</th>
-            <th>Actions</th>
+            <th class="center">Price</th>
+            <th class="center">ISBN</th>
+            <th class="center">Quantity</th>
+            <th class="center">Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -18,11 +18,13 @@
             <td><a class="bookTitle" [href]="'/book/' + book.id">{{book.title}}</a></td>
             <td>{{book.author}}</td>
             <td>{{book.publisher}}</td>
-            <td>{{book.price}}</td>
-            <td>{{book.isbn}}</td>
-            <td>{{book.quantity}}</td>
-            <td>
+            <td class="center">{{book.price}}</td>
+            <td class="center">{{book.isbn}}</td>
+            <td class="center">{{book.quantity}}</td>
+            <td class="center">
+                <button id="viewBtn" (click)="viewBook(book.id)" class="btn btn-info">View</button>
                 <button id="updateBtn" (click)="updateBook(book.id)" class="btn btn-info">Update</button>
+                <button id="deleteBtn" (click)="deleteBook(book.id)" class="btn btn-danger">Delete</button>
             </td>
         </tr>
     </tbody>

@@ -1,0 +1,17 @@
+/* about-us.component.css */
+.about-us-container {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+h3 {
+    color: #502f4c;
+    text-align: center;
+    background-color: #c8b8c9;
+}
+
+p {
+    font-size: 18px;
+    color: #502f4c;
+}
