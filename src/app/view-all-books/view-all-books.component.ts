@@ -24,4 +24,15 @@ export class ViewAllBooksComponent {
   updateBook(id: number | undefined) {
     this.router.navigate(['updateBook', id]);
   }
+  viewBook(id: number | undefined) {
+    this.router.navigate(['book', id]);
+  }
+  deleteBook(id: number | undefined) {
+    this.bookService.deleteBook(id).subscribe(data => {
+      console.log("Message : " + data)
+      this.getBooks();
+    }, error => {
+      console.error('Error updating the book', error);
+    })
+  }
 }

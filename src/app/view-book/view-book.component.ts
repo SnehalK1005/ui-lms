@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Book } from '../book';
 import { BookService } from '../book.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -15,7 +15,8 @@ export class ViewBookComponent {
   book: Book = new Book();
   constructor(
     private route: ActivatedRoute,
-    private bookService: BookService
+    private bookService: BookService,
+    private router: Router
   ) {}
   ngOnInit(): void {
     const bookId = this.route.snapshot.paramMap.get('id');
@@ -24,5 +25,8 @@ export class ViewBookComponent {
         this.book = book;
       });
     }
+  }
+  backToViewBook() {
+    this.router.navigate(['books']);
   }
 }

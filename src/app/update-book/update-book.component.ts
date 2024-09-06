@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Book } from '../book';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BookService } from '../book.service';
+import { error } from 'console';
 
 @Component({
   selector: 'app-update-book',
@@ -17,7 +18,8 @@ export class UpdateBookComponent {
 
   constructor(
     private bookService: BookService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -31,5 +33,14 @@ export class UpdateBookComponent {
       }
     );
   }
-  onSubmit(): void {}
+  onSubmit(): void {
+    this.bookService.updateBook(this.id, this.book).subscribe(data => {
+      this.goToBookList();
+    }, error => {
+      console.error('Error updating the book', error);
+    })
+  }
+  goToBookList() {
+    this.router.navigate(['/books']);
+  }
 }
