@@ -12,16 +12,16 @@ import { Router } from '@angular/router';
 })
 export class ViewAllBooksComponent {
   books: Book[] = [];
-  constructor(private bookService: BookService, private router: Router){ }
-  ngOnInit(): void{
+  constructor(private bookService: BookService, private router: Router) {}
+  ngOnInit(): void {
     this.getBooks();
   }
-  private getBooks(){
-    this.bookService.getBooksList().subscribe(data => {
+  private getBooks() {
+    this.bookService.getBooksList().subscribe((data) => {
       this.books = data;
-    })
+    });
   }
-  updateBook(id: number|undefined){
-    this.router.navigate(['updateBook', id])
+  updateBook(id: number | undefined) {
+    this.router.navigate(['updateBook', id]);
   }
 }

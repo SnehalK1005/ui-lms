@@ -4,13 +4,8 @@
     margin: 0 auto;
     font-family: Arial, sans-serif;
     background-color: #f9f4f5;
-    color: #000000;
+    color: #502f4c;
     border-radius: 5px;
-}
-
-.content h1,
-.content h2 {
-    color: #333;
 }
 
 .content p {
@@ -19,29 +14,11 @@
 }
 
 .content ul {
-    display: inline-flex;
     list-style-type: none;
     padding: 0;
 }
 
 .content ul li {
-    background: #f0f0f0;
-    margin: 5px 19px;
-    padding: 10px 0px 0px 10px;
-    border-radius: 5px;
-}
-
-.content .hours,
-.content .contact {
-    margin-top: 20px;
-}
-
-.services a {
-    color: #70587c;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.intro {
-    color: #502f4c;
+    background: #c8b8db;
+    padding: 10px 0px 5px 10px;
 }

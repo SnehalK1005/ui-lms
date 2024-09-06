@@ -2,8 +2,7 @@
 @import url(./../node_modules/bootstrap/dist/css/bootstrap.min.css);
 body {
     background-image: url('../public/bgLMS.jpg');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
 }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
