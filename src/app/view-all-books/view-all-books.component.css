@@ -1,18 +1,28 @@
-#title{
-    color: #c8b8db;
-    background-color: #502f4c;
+#title {
     display: flex;
+    background-color: #c8b8db;
+    color: #502f4c;
     justify-content: center;
     align-items: center;
+    font-weight: bolder;
     flex-direction: column;
+    border: 2px solid #70587c;
 }
+
 #title h2 {
     text-align: center;
     font-size: 25px;
     margin-top: 10px;
 }
-.bookTitle{
+
+.bookTitle {
     text-decoration: none;
     color: #6c757d;
     font-weight: bold;
+}
+
+#updateBtn {
+    background-color: #c8b8db;
+    color: #502f4c;
+    border: none;
 }

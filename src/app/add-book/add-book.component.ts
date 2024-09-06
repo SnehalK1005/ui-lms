@@ -14,19 +14,23 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class AddBookComponent {
   book: Book = new Book();
-  constructor(private bookService: BookService, private router: Router, private snackBar: MatSnackBar) {}
-  ngOnInit(): void{}
+  constructor(
+    private bookService: BookService,
+    private router: Router,
+    private snackBar: MatSnackBar
+  ) {}
+  ngOnInit(): void {}
 
-  saveEmployee(){
+  saveEmployee() {
     this.bookService.addBook(this.book).subscribe(
-      data => {
-        console.log("New Book Added", data);  // Log the response
+      (data) => {
+        console.log('New Book Added', data); // Log the response
         this.snackBar.open('Book added successfully!', 'Close', {
           duration: 3000,
         });
-      }, 
-      error => {
-        console.error("Error adding book:", error);  // Log the error
+      },
+      (error) => {
+        console.error('Error adding book:', error); // Log the error
         this.snackBar.open('Error adding book. Please try again.', 'Close', {
           duration: 3000,
         });
@@ -34,12 +38,12 @@ export class AddBookComponent {
     );
   }
 
-  goToBookList(){
-    this.router.navigate(['/books'])
+  goToBookList() {
+    this.router.navigate(['/books']);
   }
 
   onSubmit(): void {
-    console.log("New Book Added", this.book);
+    console.log('New Book Added', this.book);
     this.saveEmployee();
     this.goToBookList();
   }

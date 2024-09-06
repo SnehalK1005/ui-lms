@@ -15,14 +15,14 @@
     </thead>
     <tbody>
         <tr *ngFor="let book of books">
-            <td><a class= "bookTitle" [href]="'/book/' + book.id">{{book.title}}</a></td>
+            <td><a class="bookTitle" [href]="'/book/' + book.id">{{book.title}}</a></td>
             <td>{{book.author}}</td>
             <td>{{book.publisher}}</td>
             <td>{{book.price}}</td>
             <td>{{book.isbn}}</td>
             <td>{{book.quantity}}</td>
             <td>
-                <button (click)="updateBook(book.id)" class="btn btn-info">Update</button>
+                <button id="updateBtn" (click)="updateBook(book.id)" class="btn btn-info">Update</button>
             </td>
         </tr>
     </tbody>
