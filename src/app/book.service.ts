@@ -19,10 +19,15 @@ export class BookService {
   getBookById(id: number | undefined): Observable<Book> {
     return this.httpClient.get<Book>(`${this.baseUrl}/book/${id}`);
   }
-  updateBook(id: number | undefined, book: Book): Observable<Object>{
+  updateBook(id: number | undefined, book: Book): Observable<Object> {
     return this.httpClient.put(`${this.baseUrl}/books/${id}`, book);
   }
-  deleteBook(id: number | undefined): Observable<Object>{
+  deleteBook(id: number | undefined): Observable<Object> {
     return this.httpClient.delete(`${this.baseUrl}/books/${id}`);
+  }
+  getSearchedList(params: any): Observable<Book[]> {
+    return this.httpClient.get<Book[]>(`${this.baseUrl}/books/search`, {
+      params,
+    });
   }
 }

@@ -4,6 +4,7 @@ import { AddBookComponent } from './add-book/add-book.component';
 import { ViewBookComponent } from './view-book/view-book.component';
 import { UpdateBookComponent } from './update-book/update-book.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { SearchBooksComponent } from './search-books/search-books.component';
 
 export const routes: Routes = [
   { path: 'books', component: ViewAllBooksComponent },
@@ -11,5 +12,6 @@ export const routes: Routes = [
   { path: 'book/:id', component: ViewBookComponent },
   { path: 'updateBook/:id', component: UpdateBookComponent },
   { path: 'aboutUs', component: AboutUsComponent },
+  { path: 'search', component: SearchBooksComponent },
   { path: '', redirectTo: 'books', pathMatch: 'full' },
 ];

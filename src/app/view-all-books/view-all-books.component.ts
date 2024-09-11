@@ -28,11 +28,14 @@ export class ViewAllBooksComponent {
     this.router.navigate(['book', id]);
   }
   deleteBook(id: number | undefined) {
-    this.bookService.deleteBook(id).subscribe(data => {
-      console.log("Message : " + data)
-      this.getBooks();
-    }, error => {
-      console.error('Error updating the book', error);
-    })
+    this.bookService.deleteBook(id).subscribe(
+      (data) => {
+        console.log('Message : ' + data);
+        this.getBooks();
+      },
+      (error) => {
+        console.error('Error updating the book', error);
+      }
+    );
   }
 }

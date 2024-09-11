@@ -1,0 +1,51 @@
+<div class="container">
+    <h2>Search Books</h2>
+    <table id="searchTable" class="table">
+        <tbody>
+            <tr>
+                <td><label for="filterField">Filter By: </label></td>
+                <td><select [(ngModel)]="filterField" id="filterField">
+                        <option value="title">Title</option>
+                        <option value="author">Author</option>
+                        <option value="publisher">Publisher</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td><label for="filterValue">Enter Value: </label></td>
+                <td><input type="text" [(ngModel)]="filterValue" id="filterValue" /></td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="buttons">
+        <button id="searchBtn" (click)="onSearch()" class="btn btn-info">Search Books</button>
+        <button id="clearBtn" (click)="clearSearch()" class="btn btn-info">Clear Search</button>
+    </div>
+    <hr>
+    <div *ngIf="filteredBooks.length === 0">
+        <p id="noBook">Books not found with selected filters !!</p>
+    </div>
+    <div *ngIf="filteredBooks.length > 0">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Publisher</th>
+                    <th class="center">Price</th>
+                    <th class="center">ISBN</th>
+                    <th class="center">Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of filteredBooks">
+                    <td><a class="bookTitle" [href]="'/book/' + book.id">{{book.title}}</a></td>
+                    <td>{{book.author}}</td>
+                    <td>{{book.publisher}}</td>
+                    <td class="center">{{book.price}}</td>
+                    <td class="center">{{book.isbn}}</td>
+                    <td class="center">{{book.quantity}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
