@@ -3,7 +3,8 @@ import { BookService } from '../book.service';
 import { Router } from '@angular/router';
 import { Book } from '../book';
 import { FormsModule } from '@angular/forms';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar'; // Import MatSnackBar
+
 
 @Component({
   selector: 'app-add-book',
@@ -17,23 +18,18 @@ export class AddBookComponent {
   constructor(
     private bookService: BookService,
     private router: Router,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar // Inject MatSnackBar
   ) {}
   ngOnInit(): void {}
 
   saveEmployee() {
     this.bookService.addBook(this.book).subscribe(
       (data) => {
-        console.log('New Book Added', data); // Log the response
-        this.snackBar.open('Book added successfully!', 'Close', {
-          duration: 3000,
-        });
+        this.openSnackBar('Book added successfully !!', 'Close'); // Success Snackbar
+        this.goToBookList();
       },
       (error) => {
-        console.error('Error adding book:', error); // Log the error
-        this.snackBar.open('Error adding book. Please try again.', 'Close', {
-          duration: 3000,
-        });
+        this.openSnackBar('Error adding book !!', 'Close'); // Error Snackbar
       }
     );
   }
@@ -43,8 +39,14 @@ export class AddBookComponent {
   }
 
   onSubmit(): void {
-    console.log('New Book Added', this.book);
     this.saveEmployee();
-    this.goToBookList();
+  }
+
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
+      duration: 5000,
+      horizontalPosition: 'center',
+      verticalPosition: 'top',
+    });
   }
 }
