@@ -30,7 +30,7 @@ export class ViewAllBooksComponent {
   deleteBook(id: number | undefined) {
     this.bookService.deleteBook(id).subscribe(
       (data) => {
-        console.log('Message : ' + data);
+        console.log('Deleted Book Successfully : ' + data);
         this.getBooks();
       },
       (error) => {
